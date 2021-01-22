@@ -20,6 +20,9 @@
                 }).then(function (furniture) {
                     //set furniture details
                     document.getElementById("imgFurniture").setAttribute('src', furniture.imageURL);
+                    document.getElementById("furnitureName").innerText = furniture.name;
+                    document.getElementById("price").innerText = `$${furniture.price}.00`;
+                    document.getElementById("description").innerText = furniture.description;
                 
                     if(memberEmail != null && memberEmail != '') {
                         document.getElementById("addToCartBtn").innerHTML = '<button class="btn btn-primary" onclick="addToCart(\''
